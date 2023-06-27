@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <title>Weather-application</title>
+    <style>
+        .form-control {
+            width: 40%;
+        }
+        .card{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Weather App</a>
+                <input id="city" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="my-4 text-center "><b>Weather</b> <i>for</i><i> <span id="cityName"></span></i></h1>
+        <div class="row">
+            <div class="col-sm ">
+                <div class="card">
+                    <div class="card" style=" height: 27rem;">
+                        <div>
+                            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                            <lord-icon src="https://cdn.lordicon.com/vnioezyi.json" trigger="loop" delay="2000"
+                                colors="outline:#d1e3fa,primary:#3080e8" style="width:250px;height:250px">
+                            </lord-icon>
+                            
+                        </div>
+                       
+                        <div class="card-body">
+                            <p class="card-text">
+                        
+                                <li>Temperature is <span id="temp"></span><sup>&#8451;</sup></li>
+                                <li>Min Temperature is <span id="min_temp"></span></li>
+                                <li>Max Temperature is <span id="max_temp"></span></li>
+                                <li>Humidity is <span id="humidity"></span>%</li>
+                                <li>Feels like is <span id="feels_like"></span></li>
+                          
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card-sm">
+                    <div class="card" style="height: 28rem;" >
+                        <div>
+                            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                            <lord-icon src="https://cdn.lordicon.com/zeabctil.json" trigger="loop"
+                                colors="outline:#121331,primary:#4bb3fd,secondary:#ebe6ef" state="loop"
+                                style="width:250px;height:250px">
+                            </lord-icon>
+
+                        </div>
+                      
+                        <div class="card-body ">
+                            <h4>More Info:</h4>
+                            <p class="card-text">
+                           
+                                <li>Cloud PCT is <span id="cloud_pct"></span></li>
+                                <li>Sunrise like is <span id="sunrise"></span></li>
+                                <li>Sunset like is <span id="sunset"></span></li>
+                                <li>Wind speed is <span id="wind_speed"></span>km/hr</li>
+                                <li>Wind_degrees is <span id="wind_degrees"></span></li>
+                        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="display-6 text-center m-4 border border-5"> <b> WEA</b>THER<i> OF</i> OT<b><i>HE</i></b>R CIT<b><i>Y/COUNT</i></b>RIES
+    </h2>
+    <div class="container  mb-4 table-responsive">
+        <table class="table text-centre">
+            <thead>
+                <tr>
+                    <th scope="col">-</th>
+                    <th scope="col">Cloud_pct</th>
+                    <th scope="col">Feels_like</th>
+                    <th scope="col">Humidity</th>
+                    <th scope="col">Max_temp</th>
+                    <th scope="col">Min_temp</th>
+                    <th scope="col">Sunrise</th>
+                    <th scope="col">Sunset</th>
+                    <th scope="col">Temp</th>
+                    <th scope="col">Wind_degrees</th>
+                    <th scope="col">Wind_speed</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <th scope="row">Delhi</th>
+                    <td><span id="cloud_pct_delhi"></span></td>
+                    <td><span id="feels_like_delhi"></span></td>
+                    <td><span id="humidity_delhi"></span></td>
+                    <td><span id="max_temp_delhi"></span></td>
+                    <td><span id="min_temp_delhi"></span></td>
+                    <td><span id="sunrise_delhi"></span></td>
+                    <td><span id="sunset_delhi"></span></td>
+                    <td><span id="temp_delhi"></span></td>
+                    <td><span id="wind_degrees_delhi"></span></td>
+                    <td><span id="wind_speed_delhi"></span></td>
+
+                    <!-- <td><span id="cloud_pct"></span></td>
+                    <td><span id="feels_like"></span></td>
+                    <td><span id="humidity"></span></td>
+                    <td><span id="max_temp"></span></td>
+                    <td><span id="min_temp"></span></td>
+                    <td><span id="sunrise"></span></td>
+                    <td><span id="sunset"></span></td>
+                    <td><span id="temp"></span></td>
+                    <td><span id="wind_degrees"></span></td>
+                    <td><span id="wind_speed"></span></td> -->
+
+                </tr>
+                <tr>
+                    <th scope="row">Mumbai</th>
+                    <td><span id="cloud_pct_mumbai"></span></td>
+                    <td><span id="feels_like_mumbai"></span></td>
+                    <td><span id="humidity_mumbai"></span></td>
+                    <td><span id="max_temp_mumbai"></span></td>
+                    <td><span id="min_temp_mumbai"></span></td>
+                    <td><span id="sunrise_mumbai"></span></td>
+                    <td><span id="sunset_mumbai"></span></td>
+                    <td><span id="temp_mumbai"></span></td>
+                    <td><span id="wind_degrees_mumbai"></span></td>
+                    <td><span id="wind_speed_mumbai"></span></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Kolkata</th>
+                    <td><span id="cloud_pct_kolkata"></span></td>
+                    <td><span id="feels_like_kolkata"></span></td>
+                    <td><span id="humidity_kolkata"></span></td>
+                    <td><span id="max_temp_kolkata"></span></td>
+                    <td><span id="min_temp_kolkata"></span></td>
+                    <td><span id="sunrise_kolkata"></span></td>
+                    <td><span id="sunset_kolkata"></span></td>
+                    <td><span id="temp_kolkata"></span></td>
+                    <td><span id="wind_degrees_kolkata"></span></td>
+                    <td><span id="wind_speed_kolkata"></span></td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Jamnagar</th>
+                    <td><span id="cloud_pct_Jamnagar"></span></td>
+                    <td><span id="feels_like_Jamnagar"></span></td>
+                    <td><span id="humidity_Jamnagar"></span></td>
+                    <td><span id="max_temp_Jamnagar"></span></td>
+                    <td><span id="min_temp_Jamnagar"></span></td>
+                    <td><span id="sunrise_Jamnagar"></span></td>
+                    <td><span id="sunset_Jamnagar"></span></td>
+                    <td><span id="temp_Jamnagar"></span></td>
+                    <td><span id="wind_degrees_Jamnagar"></span></td>
+                    <td><span id="wind_speed_Jamnagar"></span></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
